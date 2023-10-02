@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = process.env.BASE_URL
+export const BASE_URL = process.env.BASE_URL
 
 export const authenticateSignup = async (data) => {
     try{
