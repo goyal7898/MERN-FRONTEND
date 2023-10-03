@@ -3,7 +3,7 @@ import axios from "axios";
 
 import * as actionType from '../constants/cartConstants';
 
-export const URL = 'https://mern-stack2.onrender.com';
+export const URL = "https://mern-backend2-1.onrender.com";
 
 export const addToCart = (id,quantity) => async (dispatch) => {
     try {

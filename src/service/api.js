@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "https://mern-backend2-1.onrender.com";
 
 export const authenticateSignup = async (data) => {
     try{
@@ -21,7 +21,6 @@ export const authenticateLogin = async (data) => {
 
 export const getProductById = async (id) => {
     try {
-        console.log(`${BASE_URL}`)
         return await axios.get(`${BASE_URL}/product/${id}`);
     } catch (error) {
         console.log('Error while getting product by id response', error);

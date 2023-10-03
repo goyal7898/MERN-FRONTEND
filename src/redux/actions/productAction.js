@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import * as actionTypes from '../constants/productConstant.js';
 
-export const URL = 'https://mern-stack2.onrender.com';
+export const URL = "https://mern-backend2-1.onrender.com";
 
 export const getProducts = () => async (dispatch) => {
     try {
