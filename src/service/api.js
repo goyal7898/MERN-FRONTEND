@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-export const BASE_URL = process.env.BASE_URL
+const BASE_URL = "http://localhost:8000";
 
 export const authenticateSignup = async (data) => {
     try{
-        return await axios.post(`${URL}/signup`, data);
+        return await axios.post(`${BASE_URL}/signup`, data);
     } catch (error){
         console.log(`Error while calling signup api`, error);
     }
@@ -12,7 +12,7 @@ export const authenticateSignup = async (data) => {
 
 export const authenticateLogin = async (data) => {
     try{
-        return await axios.post(`${URL}/login`, data);
+        return await axios.post(`${BASE_URL}/login`, data);
     } catch (error){
         console.log(`Error while calling login api`, error);
         return error.response;
@@ -21,7 +21,8 @@ export const authenticateLogin = async (data) => {
 
 export const getProductById = async (id) => {
     try {
-        return await axios.get(`${URL}/product/${id}`);
+        console.log(`${BASE_URL}`)
+        return await axios.get(`${BASE_URL}/product/${id}`);
     } catch (error) {
         console.log('Error while getting product by id response', error);
     }
